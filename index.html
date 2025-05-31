@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mano de Tigre</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Pacifico', cursive;
+      background-color: #fff8f0;
+    }
+    .bg-slider {
+      background-size: cover;
+      background-position: center;
+      animation: slideShow 15s infinite;
+    }
+    @keyframes slideShow {
+      0%   { background-image: url('./assets/bg1.jpg'); }
+      33%  { background-image: url('./assets/bg2.jpg'); }
+      66%  { background-image: url('./assets/bg3.jpg'); }
+      100% { background-image: url('./assets/bg1.jpg'); }
+    }
+    .text-outline {
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+  <!-- Header -->
+  <header class="bg-yellow-100 py-6 shadow fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+      <div class="flex items-center space-x-4">
+        <img src="./assets/logo.png" alt="Logo Mano de Tigre" class="h-16 w-auto">
+        <div>
+          <h1 class="text-2xl text-brown-800 font-bold">Mano de Tigre</h1>
+          <p class="text-sm text-brown-600 italic">para cuando una mano de gato no basta...</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-6">
+        <nav class="hidden md:flex space-x-6">
+          <a href="#catalogo" class="text-brown-700 hover:text-orange-500">Catálogo</a>
+          <a href="#nosotros" class="text-brown-700 hover:text-orange-500">¿Quiénes somos?</a>
+          <a href="#contacto" class="text-brown-700 hover:text-orange-500">Contacto</a>
+        </nav>
+        <form class="hidden md:flex items-center">
+          <input type="email" placeholder="Tu correo" class="px-3 py-1 rounded-l border border-gray-300 text-sm">
+          <button class="bg-orange-400 hover:bg-orange-500 text-white px-4 py-1 rounded-r text-sm">Suscribirse</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Hero -->
+  <main class="bg-slider py-40 text-center px-4 text-white">
+    <h2 class="text-5xl font-extrabold mb-4 text-outline">Descubre el sabor de un buen café</h2>
+    <p class="text-xl mb-6 text-outline">Insumos y accesorios para amantes del café: mugs, molinillos, cafeteras y más</p>
+    <form class="max-w-md mx-auto flex flex-col sm:flex-row items-center gap-3 md:hidden">
+      <input type="email" placeholder="Ingresa tu correo" class="flex-1 px-4 py-2 rounded border border-gray-300 text-gray-900">
+      <button class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded">Suscribirse</button>
+    </form>
+  </main>
+
+  <!-- Productos -->
+  <section id="catalogo" class="py-24 bg-white px-4">
+    <div class="max-w-7xl mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-12 text-brown-700">Nuestros Productos</h3>
+      <div class="grid gap-8 md:grid-cols-3 lg:grid-cols-3">
+        <!-- Producto 1 -->
+        <div class="bg-yellow-50 p-6 rounded shadow transform transition-transform hover:scale-105">
+          <img src="./assets/mug.jpg" class="h-48 w-full object-cover rounded" alt="Mug café">
+          <h4 class="mt-4 text-xl font-semibold">Mugs Personalizados</h4>
+          <p class="mt-2 text-gray-600">Ideales para café caliente, disponibles en varios colores y diseños.</p>
+        </div>
+        <!-- Producto 2 -->
+        <div class="bg-yellow-50 p-6 rounded shadow transform transition-transform hover:scale-105">
+          <img src="./assets/molinillo.jpg" class="h-48 w-full object-cover rounded" alt="Molinillo">
+          <h4 class="mt-4 text-xl font-semibold">Molinillos de Café</h4>
+          <p class="mt-2 text-gray-600">Convierte tu café en una experiencia gourmet con nuestros molinillos manuales.</p>
+        </div>
+        <!-- Producto 3 -->
+        <div class="bg-yellow-50 p-6 rounded shadow transform transition-transform hover:scale-105">
+          <img src="./assets/cafetera.jpg" class="h-48 w-full object-cover rounded" alt="Cafetera">
+          <h4 class="mt-4 text-xl font-semibold">Cafeteras Italianas</h4>
+          <p class="mt-2 text-gray-600">Cafeteras clásicas que extraen todo el sabor del grano recién molido.</p>
+        </div>
+        <!-- Producto 4 -->
+        <div class="bg-yellow-50 p-6 rounded shadow transform transition-transform hover:scale-105">
+          <img src="./assets/granos.jpg" class="h-48 w-full object-cover rounded" alt="Granos de café">
+          <h4 class="mt-4 text-xl font-semibold">Granos de Café Premium</h4>
+          <p class="mt-2 text-gray-600">Origen 100% colombiano, tueste medio para una experiencia intensa y equilibrada.</p>
+        </div>
+        <!-- Producto 5 -->
+        <div class="bg-yellow-50 p-6 rounded shadow transform transition-transform hover:scale-105">
+          <img src="./assets/vasos.jpg" class="h-48 w-full object-cover rounded" alt="Vasos térmicos">
+          <h4 class="mt-4 text-xl font-semibold">Vasos Térmicos</h4>
+          <p class="mt-2 text-gray-600">Perfectos para llevar tu café a todas partes, conservan la temperatura por horas.</p>
+        </div>
+        <!-- Producto 6 -->
+        <div class="bg-yellow-50 p-6 rounded shadow transform transition-transform hover:scale-105">
+          <img src="./assets/kit.jpg" class="h-48 w-full object-cover rounded" alt="Kit barista">
+          <h4 class="mt-4 text-xl font-semibold">Kit de Barista</h4>
+          <p class="mt-2 text-gray-600">Incluye tamper, jarra de leche, termómetro y todo lo necesario para iniciarte como barista.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contacto" class="bg-orange-100 text-brown-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h5 class="font-bold mb-4">Mano de Tigre</h5>
+        <p>Especialistas en insumos y accesorios para los fanáticos del café.</p>
+      </div>
+      <div>
+        <h5 class="font-bold mb-4">Contacto</h5>
+        <ul>
+          <li>Email: contacto@manodetigre.cl</li>
+          <li>WhatsApp: +56 9 1234 5678</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-bold mb-4">Síguenos</h5>
+        <div class="flex space-x-4">
+          <a href="#" class="hover:text-orange-500">Instagram</a>
+          <a href="#" class="hover:text-orange-500">Facebook</a>
+          <a href="#" class="hover:text-orange-500">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-8 text-sm text-brown-600">&copy; 2025 Mano de Tigre. Todos los derechos reservados.</div>
+  </footer>
+</body>
+</html>
